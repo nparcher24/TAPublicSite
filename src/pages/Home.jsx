@@ -84,7 +84,7 @@ export default function Home(props) {
                       <div className=" flex flex-col justify-center">
                         <Fade left big>
                           <img
-                            className="lg:px-32 px-10 max-w-md"
+                            className="lg:px-32 px-10 max-w-md object-contain"
                             src="https://res.cloudinary.com/trainamerican/image/upload/dpr_auto,q_auto/v1634735144/large%20dark%20logo.webp"
                             alt="10.40.10 Fitness"
                           />
@@ -296,10 +296,10 @@ export default function Home(props) {
                             <li>Start the recovery process immediately</li>
                             <li>
                               Recovery focused cool down increases strength,
-                              growth, and resilience of the muscles while
+                              growth, and resilience of the muscles while{" "}
                               <span className="font-bold text-taBlue">
-                                decreasing the risk of injury.{" "}
-                              </span>
+                                decreasing the risk of injury.
+                              </span>{" "}
                             </li>
                             <li>Train hard. Recover harder.</li>
                           </ul>
