@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.jsx", ".src/*.js"],
+  purge: ["./src/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
@@ -11,6 +11,10 @@ module.exports = {
         taBlue: "#304890",
         taLightBlue: "#669BBC",
       }),
+      // backgroundColor: (theme) => ({
+      //   ...theme("colors"),
+      //   body: "#fff",
+      // }),
       screens: {
         sm: "640px",
         md: "768px",
@@ -162,10 +166,7 @@ module.exports = {
         160: "40rem",
         192: "48rem",
       },
-      // backgroundColor: (theme) => ({
-      //   ...theme("colors"),
-      //   body: "#fff",
-      // }),
+
       backgroundPosition: {
         bottom: "bottom",
         center: "center",

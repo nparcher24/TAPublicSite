@@ -154,7 +154,7 @@ export default function Home(props) {
                     onClick={() => {
                       setShowAboutVideo(false);
                     }}
-                    className="flex fixed z-50 inset-0 h-screen w-screen overflow-y-auto"
+                    className="flex fixed z-50 inset-0 h-screen w-screen overflow-y-auto bg-black"
                   >
                     <div className="my-auto w-full">
                       <h2 className="text-4xl p-8 lg:px-32 text-white text-center leading-tight font-bold font-heading mx-auto">
@@ -315,7 +315,6 @@ export default function Home(props) {
                             >
                               <source
                                 src="https://res.cloudinary.com/trainamerican/video/upload/dpr_auto,f_auto,q_auto/v1634238748/10_Recovery_qi809x.mp4"
-                                // src="https://res.cloudinary.com/trainamerican/video/upload/v1634238748/10_Recovery_qi809x.mp4"
                                 type="video/mp4"
                               />
                             </video>
