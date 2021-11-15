@@ -5,6 +5,8 @@ import { Transition } from "@headlessui/react";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import CTA from "../components/CTA";
+import Temp from "../components/Temp";
+import { Location } from "../components/Location";
 
 export default function Home(props) {
   const [showAboutVideo, setShowAboutVideo] = React.useState(false);
@@ -190,6 +192,7 @@ export default function Home(props) {
                         We focus on making you functionally fit and looking good
                       </h3>
                     </Fade>
+
                     <Fade>
                       <div className="flex flex-wrap -mx-4 mb-20">
                         <div className="w-full lg:w-1/2 px-4 lg:pr-20 lg:pt-4 order-1 lg:order-0">
@@ -325,6 +328,7 @@ export default function Home(props) {
                   </div>
                 </section>
 
+                <Location />
                 <CTA setShowForm={props.setShowForm} />
               </div>
             ) : (

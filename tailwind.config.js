@@ -316,6 +316,10 @@ module.exports = {
       maxHeight: {
         full: "100%",
         screen: "100vh",
+        "2/3": "66vh",
+        40: "10rem",
+        80: "20rem",
+        96: "30rem",
       },
       maxWidth: {
         none: "none",
