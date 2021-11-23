@@ -5,12 +5,25 @@ import { Transition } from "@headlessui/react";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import CTA from "../components/CTA";
-import Temp from "../components/Temp";
 import { Location } from "../components/Location";
+import Promotion from "../components/Promotion";
+import Banner from "../components/Banner";
+import { ShoppingBagIcon } from "@heroicons/react/outline";
 
 export default function Home(props) {
   const [showAboutVideo, setShowAboutVideo] = React.useState(false);
   const [startedScrolling, setStartedScrolling] = React.useState(false);
+  const [promoOpen, setPromoOpen] = React.useState(true);
+  const [showBanner, setShowBanner] = React.useState(!promoOpen);
+
+  const closePromo = () => {
+    setShowBanner(true);
+    setPromoOpen(false);
+  };
+
+  const closeBanner = () => {
+    setShowBanner(false);
+  };
 
   const scrollListener = () => {
     if (!startedScrolling) {
@@ -59,8 +72,7 @@ export default function Home(props) {
                     </Typing>
 
                     <p className="text-blueGray-100 leading-relaxed">
-                      Show your patriotism by working hard, living healthy and
-                      looking good.
+                      The best workout in America, crafted by Veterans
                     </p>
                   </div>
                   <div className="flex flex-col md:flex-row">
@@ -337,6 +349,25 @@ export default function Home(props) {
           </div>
         </div>
       </div>
+      <Promotion
+        title="BLACK FRIDAY SALE"
+        subtitle="First Month of The Patriot Membership (Unlimited) at $49.99!!!"
+        countdownDate={new Date("December 1, 2021 07:00:00")}
+        imageURL="https://res.cloudinary.com/trainamerican/image/upload/v1634734948/Dark_Logo_us2kim.png"
+        buttonTitle="Claim Now!"
+        open={promoOpen}
+        setOpen={closePromo}
+      />
+      <Banner
+        icon={<ShoppingBagIcon />}
+        shortText="BLACK FRIDAY SALE!!!"
+        longText="BLACK FRIDAY SALE: First Month of The Patriot Membership (Unlimited) at $49.99!!!"
+        buttonText="CLAIM NOW"
+        closeBanner={closeBanner}
+        showClose={true}
+        open={showBanner}
+        link="/blackfriday"
+      />
     </div>
   );
 }

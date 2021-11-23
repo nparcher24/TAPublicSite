@@ -4,7 +4,7 @@ import { Suspense } from "react";
 // import Navigation from "./control/Navigation";
 // import Footer from "./control/Footer";
 
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 import Bounce from "react-reveal/Bounce";
@@ -37,28 +37,56 @@ function Main() {
   return (
     <div>
       {/* <Temp /> */}
-      <Switch>
-        <Route exact={true} path="/privacy">
-          <Suspense fallback={<div>Loading...</div>}>
-            <PrivacyPolicy />
-          </Suspense>
-        </Route>
-        <Route exact={true} path="/terms">
-          <Suspense fallback={<div>Loading...</div>}>
-            <Terms />
-          </Suspense>
-        </Route>
-        <Route exact={true} path="/about">
-          <Suspense fallback={<div>Loading...</div>}>
-            <AboutUs setShowForm={setShowForm} />
-          </Suspense>{" "}
-        </Route>
-        <Route path="/">
-          <Suspense fallback={<div>Loading...</div>}>
-            <Home setShowForm={setShowForm} />
-          </Suspense>
-        </Route>
-      </Switch>
+      <Routes>
+        <Route
+          exact={true}
+          path="/blackfriday"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Temp />
+            </Suspense>
+          }
+        />
+
+        <Route
+          exact={true}
+          path="/privacy"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <PrivacyPolicy />
+            </Suspense>
+          }
+        />
+
+        <Route
+          exact={true}
+          path="/terms"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Terms />
+            </Suspense>
+          }
+        />
+
+        <Route
+          exact={true}
+          path="/about"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <AboutUs setShowForm={setShowForm} />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Home setShowForm={setShowForm} />
+            </Suspense>
+          }
+        />
+      </Routes>
       <Suspense fallback={<div>Loading...</div>}>
         <Navigation pathName={location.pathname} setShowForm={setShowForm} />
       </Suspense>

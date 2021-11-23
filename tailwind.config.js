@@ -165,6 +165,7 @@ module.exports = {
         128: "32rem",
         160: "40rem",
         192: "48rem",
+        200: "50rem",
       },
 
       backgroundPosition: {
