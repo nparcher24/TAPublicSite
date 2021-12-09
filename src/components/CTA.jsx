@@ -25,18 +25,19 @@ export default function CTA(props) {
           </div>
           <div className="md:flex px-6 md:px-2 justify-center items-center  w-full md:w-auto">
             <div className="space-y-2 md:space-y-4 text-center">
-              <p className="text-2xl md:text-4xl  text-gray-900 font-heading tracking-wider text-center md:text-left">
+              <p className="text-2xl md:text-4xl   text-gray-900 font-heading tracking-wider text-center">
                 Try us out
               </p>
-              <button
+              <a
                 aria-label="contact button"
-                onClick={() => {
-                  props.setShowForm(true);
-                }}
-                className="rounded  inline-block py-5 px-16 leading-none text-xl text-white bg-taBlue hover:bg-taLightBlue shadow font-heading transition-all duration-500"
+                href="/locations"
+                // onClick={() => {
+                //   props.setShowForm(true);
+                // }}
+                className="rounded inline-block py-5 px-16 leading-none text-xl text-white bg-taBlue hover:bg-taLightBlue shadow font-bold transition-all duration-500"
               >
                 CLAIM FREE WEEK
-              </button>
+              </a>
             </div>
           </div>
         </div>

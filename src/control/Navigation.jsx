@@ -10,6 +10,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 const links = [
   { name: "Home", destination: "/" },
   { name: "About Us", destination: "/about" },
+  { name: "Locations", destination: "/locations" },
 ];
 
 export default function Navigation(props) {
@@ -44,7 +45,7 @@ export default function Navigation(props) {
   });
 
   return (
-    <div>
+    <div className="z-50 absolute">
       <Fade top when={showNavbar} duration={300}>
         <div
           className="bg-white shadows w-screen top-0 fixed overflow-hidden "
@@ -115,15 +116,16 @@ export default function Navigation(props) {
                       About Us
                     </a> */}
                     <div className="flex items-center justify-items-center">
-                      <button
+                      <a
                         area-label="contact button"
-                        onClick={() => {
-                          props.setShowForm(true);
-                        }}
+                        href="/locations"
+                        // onClick={() => {
+                        //   props.setShowForm(true);
+                        // }}
                         className="h-12 px-4 py-3 text-md inline-flex items-center font-semibold leading-none bg-taBlue hover:bg-taLightBlue text-white rounded transition duration-500 ease-in-out "
                       >
                         FREE TRIAL
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -140,7 +142,7 @@ export default function Navigation(props) {
               leaveTo="transform scale-95 opacity-0"
             >
               <div className="md:hidden">
-                <div className="pt-2 pb-3 space-y-3">
+                <div className="flex flex-col pt-2 pb-3 space-y-3">
                   {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
                   {links.map((link, i) => (
                     <a
@@ -157,15 +159,12 @@ export default function Navigation(props) {
                     </a>
                   ))}
 
-                  <button
-                    aria-label="contact button"
-                    onClick={() => {
-                      props.setShowForm(true);
-                    }}
-                    className="w-full h-16 bg-taRed text-lg text-white font-bold "
+                  <a
+                    href="/locations"
+                    className="bg-taRed text-center text-white block pl-3 pr-4 py-2  text-2xl font-medium sm:pl-5 sm:pr-6"
                   >
                     FREE TRIAL
-                  </button>
+                  </a>
                 </div>
               </div>
             </Transition>

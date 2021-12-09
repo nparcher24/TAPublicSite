@@ -5,7 +5,7 @@ import { Transition } from "@headlessui/react";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import CTA from "../components/CTA";
-import { Location } from "../components/Location";
+// import { Location } from "../components/Location";
 import Promotion from "../components/Promotion";
 import Banner from "../components/Banner";
 import { ShoppingBagIcon } from "@heroicons/react/outline";
@@ -13,8 +13,13 @@ import { ShoppingBagIcon } from "@heroicons/react/outline";
 export default function Home(props) {
   const [showAboutVideo, setShowAboutVideo] = React.useState(false);
   const [startedScrolling, setStartedScrolling] = React.useState(false);
-  const [promoOpen, setPromoOpen] = React.useState(true);
-  const [showBanner, setShowBanner] = React.useState(!promoOpen);
+  const promoEnd = new Date("December 1, 2021 07:00:00");
+  const now = new Date();
+  // const now = new Date("December 2, 2021 07:00:00");
+  const [promoOpen, setPromoOpen] = React.useState(now < promoEnd);
+  const [showBanner, setShowBanner] = React.useState(
+    now < promoEnd ? !promoOpen : false
+  );
 
   const closePromo = () => {
     setShowBanner(true);
@@ -76,15 +81,13 @@ export default function Home(props) {
                     </p>
                   </div>
                   <div className="flex flex-col md:flex-row">
-                    <button
+                    <a
                       aria-label="contact button"
-                      onClick={() => {
-                        props.setShowForm(true);
-                      }}
+                      href="/locations"
                       className="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-taRed hover:bg-taLightRed rounded transition duration-500 ease-in-out hover:scale-120"
                     >
                       Start your FREE trial
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -340,7 +343,7 @@ export default function Home(props) {
                   </div>
                 </section>
 
-                <Location />
+                {/* <Location /> */}
                 <CTA setShowForm={props.setShowForm} />
               </div>
             ) : (
@@ -350,19 +353,19 @@ export default function Home(props) {
         </div>
       </div>
       <Promotion
-        title="BLACK FRIDAY SALE"
+        title="BLACK FRIDAY SALE- The Best Deal in America!"
         subtitle="First Month of The Patriot Membership (Unlimited) at $49.99!!!"
-        countdownDate={new Date("December 1, 2021 07:00:00")}
+        countdownDate={promoEnd}
         imageURL="https://res.cloudinary.com/trainamerican/image/upload/v1634734948/Dark_Logo_us2kim.png"
-        buttonTitle="Claim Now!"
+        buttonTitle="Book Your First Class"
         open={promoOpen}
         setOpen={closePromo}
       />
       <Banner
         icon={<ShoppingBagIcon />}
-        shortText="BLACK FRIDAY SALE!!!"
-        longText="BLACK FRIDAY SALE: First Month of The Patriot Membership (Unlimited) at $49.99!!!"
-        buttonText="CLAIM NOW"
+        shortText="BLACK FRIDAY SALE!"
+        longText="BLACK FRIDAY SALE: The Best Deal in America!"
+        buttonText="Book Your First Class"
         closeBanner={closeBanner}
         showClose={true}
         open={showBanner}

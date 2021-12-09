@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline";
+import { XIcon } from "@heroicons/react/outline";
 import Fade from "react-reveal/Fade";
 
 export default function Banner(props) {

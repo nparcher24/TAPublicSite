@@ -10,6 +10,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Bounce from "react-reveal/Bounce";
 import { XIcon } from "@heroicons/react/outline";
 import Temp from "../components/Temp";
+import Locator from "./Locator";
 
 const Home = React.lazy(() => import("./Home"));
 const AboutUs = React.lazy(() => import("./AboutUs"));
@@ -44,6 +45,16 @@ function Main() {
           element={
             <Suspense fallback={<div>Loading...</div>}>
               <Temp />
+            </Suspense>
+          }
+        />
+
+        <Route
+          exact={true}
+          path="/locations"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Locator />
             </Suspense>
           }
         />

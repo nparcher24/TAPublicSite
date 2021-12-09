@@ -4,18 +4,20 @@ import pattern from "../assets/ripples.png";
 export default function Temp(props) {
   const date = new Date("December 1, 2021 07:00:00");
   const now = new Date();
+  // const now = new Date("December 2, 2021 07:00:00");
 
   const [timeRemaining, setTimeRemaining] = React.useState(date - now);
-  const [isActive, setIsActive] = React.useState(true);
+  const [isActive, setIsActive] = React.useState(now < date);
+  console.log("IS ACTIVE: ", isActive);
 
-  function toggle() {
-    setIsActive(!isActive);
-  }
+  // function toggle() {
+  //   setIsActive(!isActive);
+  // }
 
-  function reset() {
-    setTimeRemaining(0);
-    setIsActive(false);
-  }
+  // function reset() {
+  //   setTimeRemaining(0);
+  //   setIsActive(false);
+  // }
 
   React.useEffect(() => {
     let interval = null;
@@ -47,12 +49,12 @@ export default function Temp(props) {
     );
   }
 
-  return (
+  return isActive ? (
     <div className="pt-20 max-w-6xl mx-auto">
       <div className="flex flex-col md:flex-row bg-black">
         <img
           className=" h-40 md:h-auto md:w-80 object-cover opacity-40"
-          src="https://res.cloudinary.com/trainamerican/image/upload/v1631107071/image_7_xjmsjo.png"
+          src="https://res.cloudinary.com/trainamerican/image/upload/dpr_auto,f_auto,q_auto/v1637970061/MicrosoftTeams-image_6_qhzcps.jpg"
           alt="Peopl the gym working hard"
         />
         <div className="w-full bg-white">
@@ -62,7 +64,7 @@ export default function Temp(props) {
               backgroundImage: `url(${pattern})`,
             }}
           >
-            BLACK FRIDAAAAAAY SALE!
+            BLACK FRIDAY SALE- The Best Deal in America!
           </h1>
 
           <body className="p-2 w-full text-center font-heading tracking-widest text-lg md:text-3xl md:p-6 bg-taBlue text-white  ">
@@ -71,6 +73,35 @@ export default function Temp(props) {
           <body className="p-2 w-full text-center font-body text-md md:text-xl md:p-3 bg-taRed text-white md:rounded-br-xl">
             {sec2str(timeRemaining) + " Seconds Remaining!"}
           </body>
+          <div className="p-2 md:p-4">
+            <body className="font-bold text-md md:text-xl">
+              We are excited to have you for your FIRST CLASS!
+            </body>
+            <body className="font-body text-md md:text-xl ml-2 mt-4">
+              Here is what to expect:
+            </body>
+            <ul className="font-body text-sm md:text-lg ml-4 mt-2">
+              <li>- Greeted by our Team and a tour of our facility</li>
+              <li>
+                - A personal walk-through with your Coach to prepare you for the
+                workout ahead
+              </li>
+              <li>
+                - Perform the BEST WORKOUT in America alongside your new
+                community
+              </li>
+              <li>
+                - Decompress your body and mind to reduce your risk of injury in
+                preparation for your next workout
+              </li>
+              <li>- RECEIVE FREE Post-workout drink and Battle Bar</li>
+              <li>
+                - Our Food and Beverage Ethos: No artificial sweeteners. No
+                artificial fillers. Just what your body needs after Training
+                American
+              </li>
+            </ul>
+          </div>
           <div className="" style={{ height: "600px" }}>
             <iframe
               title="Black Friday Sale"
@@ -85,6 +116,8 @@ export default function Temp(props) {
         </div>
       </div>
     </div>
-    // </div>
+  ) : (
+    <div />
   );
+  // </div>
 }
