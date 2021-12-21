@@ -11,6 +11,7 @@ import Bounce from "react-reveal/Bounce";
 import { XIcon } from "@heroicons/react/outline";
 import Temp from "../components/Temp";
 import Locator from "./Locator";
+import FAQ from "./FAQ";
 
 const Home = React.lazy(() => import("./Home"));
 const AboutUs = React.lazy(() => import("./AboutUs"));
@@ -39,6 +40,15 @@ function Main() {
     <div>
       {/* <Temp /> */}
       <Routes>
+        <Route
+          exact={true}
+          path="/faq"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <FAQ />
+            </Suspense>
+          }
+        />
         <Route
           exact={true}
           path="/blackfriday"

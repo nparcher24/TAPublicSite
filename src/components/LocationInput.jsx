@@ -74,7 +74,7 @@ export default function LocationInput(props) {
 
         <input
           type="text"
-          inputmode="numeric"
+          inputmode="text"
           name="zip"
           id="zip-code-input"
           className="z-0 focus:ring-indigo-500 focus:border-taBlue block w-full pl-10 sm:text-sm border-gray-300 border-2 rounded-md transition duration-200"
