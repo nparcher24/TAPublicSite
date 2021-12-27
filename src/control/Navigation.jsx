@@ -4,13 +4,14 @@ import Fade from "react-reveal/Fade";
 /* This example requires Tailwind CSS v2.0+ */
 // import { Fragment } from "react";
 import { Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcon, UserCircleIcon } from "@heroicons/react/outline";
 // import DarkLogo from "../assets/DarkLogo.svg";
 
 const links = [
   { name: "Home", destination: "/" },
   { name: "About Us", destination: "/about" },
   { name: "Locations", destination: "/locations" },
+  { name: "FAQs", destination: "/faq" },
 ];
 
 export default function Navigation(props) {
@@ -67,23 +68,41 @@ export default function Navigation(props) {
 
                   <div className="-ml-2 mr-2 flex items-center md:hidden">
                     {/* Mobile menu button */}
-                    <button
+                    <div
                       aria-label="menu"
-                      onClick={() => {
-                        showMenu ? setShowMenu(false) : setShowMenu(true);
-                      }}
-                      className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                      className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 "
                     >
                       <span className="sr-only">Open main menu</span>
                       {showMenu ? (
-                        <XIcon className="block h-6 w-6" aria-hidden="true" />
-                      ) : (
-                        <MenuIcon
+                        <XIcon
+                          onClick={() => {
+                            showMenu ? setShowMenu(false) : setShowMenu(true);
+                          }}
                           className="block h-6 w-6"
                           aria-hidden="true"
                         />
+                      ) : (
+                        <div className="flex flex-row items-center space-x-2">
+                          <MenuIcon
+                            className="block h-10 w-10 rounded-md p-2 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            aria-hidden="true"
+                            onClick={() => {
+                              showMenu ? setShowMenu(false) : setShowMenu(true);
+                            }}
+                          />
+                          <a
+                            area-label="contact button"
+                            href="https://www.fitmetrix.io/memberportal/login/fee66bea-163c-ec11-aa68-c756551153f3?LocationID=16470"
+                            className="h-12 py-3 text-md inline-flex items-center font-semibold leading-none   "
+                          >
+                            <UserCircleIcon
+                              className="block h-6 w-6 hover:bg-gray-200 rounded-full transition duration-200 "
+                              area-hidden="true"
+                            />
+                          </a>
+                        </div>
                       )}
-                    </button>
+                    </div>
                   </div>
 
                   <div className="hidden md:ml-6 md:flex md:space-x-8">
@@ -96,7 +115,7 @@ export default function Navigation(props) {
                               ? "border-blue-500"
                               : ""
                           }`}
-                          key={i}
+                          key={`desktop${i}`}
                         >
                           <a
                             href={link.destination}
@@ -106,7 +125,7 @@ export default function Navigation(props) {
                           </a>
                         </div>
                       ) : (
-                        <div />
+                        <div key={`empty${i}`} />
                       )
                     )}
                     {/* <a
@@ -125,6 +144,18 @@ export default function Navigation(props) {
                         className="h-12 px-4 py-3 text-md inline-flex items-center font-semibold leading-none bg-taBlue hover:bg-taLightBlue text-white rounded transition duration-500 ease-in-out "
                       >
                         FREE TRIAL
+                      </a>
+                    </div>
+                    <div className="flex items-center justify-items-center">
+                      <a
+                        area-label="contact button"
+                        href="https://www.fitmetrix.io/memberportal/login/fee66bea-163c-ec11-aa68-c756551153f3?LocationID=16470"
+                        className="h-12 py-3 text-md inline-flex items-center font-semibold leading-none  text-gray-700  "
+                      >
+                        <UserCircleIcon
+                          className="block h-8 w-8 hover:bg-gray-200 rounded-full transition duration-200 "
+                          area-hidden="true"
+                        />
                       </a>
                     </div>
                   </div>
