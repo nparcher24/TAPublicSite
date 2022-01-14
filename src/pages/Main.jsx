@@ -13,6 +13,8 @@ import Temp from "../components/Temp";
 import Locator from "./Locator";
 import FAQ from "./FAQ";
 import Account from "./Account";
+import WorkoutPage from "./WorkoutPage";
+import ErrorPage from "./404";
 
 const Home = React.lazy(() => import("./Home"));
 const AboutUs = React.lazy(() => import("./AboutUs"));
@@ -20,16 +22,6 @@ const PrivacyPolicy = React.lazy(() => import("./PrivacyPolicy"));
 const Terms = React.lazy(() => import("./Terms"));
 const Navigation = React.lazy(() => import("../control/Navigation"));
 const Footer = React.lazy(() => import("../control/Footer"));
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCNU2yWyR0ctFUqxHJ2ZT5DcpPdh6vk97I",
-//   authDomain: "leaderboard-d5992.firebaseapp.com",
-//   projectId: "leaderboard-d5992",
-//   storageBucket: "leaderboard-d5992.appspot.com",
-//   messagingSenderId: "76465362834",
-//   appId: "1:76465362834:web:26e5f0df159e712ce2534b",
-//   measurementId: "G-6RJVS4GD1D",
-// };
 
 function Main() {
   const location = useLocation();
@@ -43,10 +35,10 @@ function Main() {
       <Routes>
         <Route
           exact={true}
-          path="/test"
+          path="/workout"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <Account />
+              <WorkoutPage />
             </Suspense>
           }
         />
@@ -108,9 +100,17 @@ function Main() {
             </Suspense>
           }
         />
-
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ErrorPage />
+            </Suspense>
+          }
+        />
         <Route
           path="/"
+          exact={true}
           element={
             <Suspense fallback={<div>Loading...</div>}>
               <Home setShowForm={setShowForm} />
@@ -133,6 +133,7 @@ function Main() {
               setShowForm(false);
             }}
           />
+
           <Bounce top>
             <iframe
               src="https://msgsndr.com/widget/form/e24tWmK0yNqTlZ04NK78"

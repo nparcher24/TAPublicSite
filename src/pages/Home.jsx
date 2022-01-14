@@ -50,14 +50,14 @@ export default function Home(props) {
           <div>
             <section className="pb-8 bg-black relative flex items-center justify-center overflow-hidden h-screen max-h-full">
               <video
-                className="absolute bottom-0 left-0 w-auto min-w-full min-h-full max-w-none opacity-20"
+                className="absolute bottom-0 left-0 w-auto min-w-full min-h-full max-w-none opacity-40"
                 autoPlay
                 muted
                 loop
                 playsInline
               >
                 <source
-                  src="https://res.cloudinary.com/trainamerican/video/upload/dpr_auto,f_auto,q_auto/v1631045595/Website_video_3_fthkuj.mp4"
+                  src="https://res.cloudinary.com/trainamerican/video/upload/q_auto/v1640631044/Hero_Video_c8zvof.mp4"
                   type="video/mp4"
                 />
               </video>

@@ -4,6 +4,7 @@ import Fade from "react-reveal/Fade";
 /* This example requires Tailwind CSS v2.0+ */
 // import { Fragment } from "react";
 import { Transition } from "@headlessui/react";
+import FlyoutMenu from "../components/FlyoutMenu";
 import { MenuIcon, XIcon, UserCircleIcon } from "@heroicons/react/outline";
 // import DarkLogo from "../assets/DarkLogo.svg";
 
@@ -146,6 +147,20 @@ export default function Navigation(props) {
                         FREE TRIAL
                       </a>
                     </div>
+
+                    <div className="flex items-center justify-items-center">
+                      <a
+                        area-label="contact button"
+                        href="https://www.fitmetrix.io/webportal/packages/fee66bea-163c-ec11-aa68-c756551153f3"
+                        // onClick={() => {
+                        //   props.setShowForm(true);
+                        // }}
+                        className="h-12 px-4 py-3 text-md inline-flex items-center font-semibold leading-none bg-taRed hover:bg-opacity-80 text-white rounded transition duration-500 ease-in-out "
+                      >
+                        BOOK NOW
+                      </a>
+                    </div>
+
                     <div className="flex items-center justify-items-center">
                       <a
                         area-label="contact button"
@@ -192,9 +207,15 @@ export default function Navigation(props) {
 
                   <a
                     href="/locations"
-                    className="bg-taRed text-center text-white block pl-3 pr-4 py-2  text-2xl font-medium sm:pl-5 sm:pr-6"
+                    className="bg-taBlue text-center text-white block pl-3 pr-4 py-2  text-2xl font-medium sm:pl-5 sm:pr-6"
                   >
                     FREE TRIAL
+                  </a>
+                  <a
+                    href="https://www.fitmetrix.io/webportal/packages/fee66bea-163c-ec11-aa68-c756551153f3"
+                    className="bg-taRed text-center text-white block pl-3 pr-4 py-2  text-2xl font-medium sm:pl-5 sm:pr-6"
+                  >
+                    BOOK NOW
                   </a>
                 </div>
               </div>
