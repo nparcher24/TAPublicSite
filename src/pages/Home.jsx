@@ -9,6 +9,7 @@ import CTA from "../components/CTA";
 import Promotion from "../components/Promotion";
 import Banner from "../components/Banner";
 import { ShoppingBagIcon } from "@heroicons/react/outline";
+import PatriotChallenge from "../components/PatriotChallenge";
 
 export default function Home(props) {
   const [showAboutVideo, setShowAboutVideo] = React.useState(false);
@@ -91,6 +92,10 @@ export default function Home(props) {
                   </div>
                 </div>
               </div>
+            </section>
+
+            <section>
+              <PatriotChallenge />
             </section>
 
             <div className="container mx-auto max-w-6xl">
