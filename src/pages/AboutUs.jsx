@@ -263,7 +263,7 @@ export default function AboutUs(props) {
         </div>
       </section>
 
-      <CTA setShowForm={props.setShowForm} />
+      <CTA />
     </div>
   );
 }

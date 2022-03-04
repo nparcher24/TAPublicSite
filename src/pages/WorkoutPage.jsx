@@ -2,7 +2,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/outline";
 import React from "react";
 
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
+import CTA from "../components/CTA";
 
 export default function WorkoutPage(props) {
   // const [width, setWidth] = React.useState(window.innerWidth);
@@ -60,28 +60,32 @@ export default function WorkoutPage(props) {
     {
       smallTitle: "Our Variety",
       largeTitle: "Keeping your muscles guessing",
-      body: "A wide variety of weight and resistance equipment to produce unique muscle stimuli (sandbag, KB, DB, slam ball, wall ball, jump rope, pull-up bar, resistance bans, etc.",
+      body: "A wide variety of weight and resistance equipment to produce unique muscle stimuli (sandbag, KB, DB, slam ball, wall ball, jump rope, pull-up bar, resistance bans, etc.)",
       imageURL:
         "https://res.cloudinary.com/trainamerican/image/upload/f_auto,q_auto/v1642198258/_O8A9939_f0sqot.jpg",
       imageAlt: "Mid workout",
     },
-  ];
 
-  // React.useEffect(() => {
-  //   // Handler to call on window resize
-  //   function handleResize() {
-  //     // Set window width/height to state
-  //     const maxHeight = 800;
-  //     setWidth(window.innerWidth);
-  //     setHeight(
-  //       window.innerHeight <= maxHeight ? window.innerHeight : maxHeight
-  //     );
-  //   }
-  //   // Add event listener
-  //   window.addEventListener("resize", handleResize);
-  //   handleResize();
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+    {
+      smallTitle: "Our Community",
+      largeTitle: "Community greatness, one person at a time",
+      body: (
+        <div>
+          <p className="font-bold">
+            'Help the person next to you improve and you will find improvement
+            yourself.'{" "}
+          </p>
+          <p>
+            We believe that group exercise naturally motivates us more, provides
+            accountability, faster results, and builds unbreakable bonds.
+          </p>
+        </div>
+      ),
+      imageURL:
+        "https://res.cloudinary.com/trainamerican/image/upload/dpr_auto,f_auto,q_auto/v1642198165/_O8A9666_gp8hum.jpg",
+      imageAlt: "Mid workout",
+    },
+  ];
 
   return (
     <div className="font-body space-y-24">
@@ -94,57 +98,6 @@ export default function WorkoutPage(props) {
               "url(https://res.cloudinary.com/trainamerican/image/upload/b_rgb:000000,f_auto,o_20,q_auto/v1640631906/3_l7rhc3.jpg)",
           }}
         />
-        {/* <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox={`0 0 ${width} ${height}`}
-          className="absolute"
-        >
-          <rect fill="#000000" width={width} height={height} />
-          <g fillOpacity="1">
-            <polygon
-              fill="#070a15"
-              points={`${width / 2} ${height * 0.125} 0 ${
-                height * 0.25
-              } 0 ${height} ${width} ${height} ${width} ${height * 0.25}`}
-            />
-            <polygon
-              fill="#0e1529"
-              points={`${width / 2} ${height * 0.25} 0 ${
-                height * 0.5
-              } 0 ${height} ${width} ${height} ${width} ${height * 0.5}`}
-            />
-            <polygon
-              fill="#151f3e"
-              points={`${width / 2} ${height * 0.375} 0 ${
-                height * 0.75
-              } 0 ${height} ${width} ${height} ${width} ${height * 0.75}`}
-            />
-            <polygon
-              fill="#1b2952"
-              points={`${width} ${height} ${width * 0.5} ${
-                height / 2
-              } 0 ${height}`}
-            />
-            <polygon
-              fill="#223367"
-              points={`${width * 0.8} ${height} ${width * 0.5} ${
-                height * 0.625
-              } ${width * 0.2} ${height}`}
-            />
-            <polygon
-              fill="#293e7b"
-              points={`${width * 0.3333} ${height} ${
-                width * 0.6666
-              } ${height} ${width * 0.5} ${height * 0.75}`}
-            />
-            <polygon
-              fill="#304890"
-              points={`${width * 0.4275} ${height} ${
-                width * 0.5714
-              } ${height} ${width / 2} ${height * 0.875}`}
-            />
-          </g>
-        </svg> */}
 
         <div className="pt-48 flex flex-col relative">
           <Fade>
@@ -153,9 +106,7 @@ export default function WorkoutPage(props) {
                 <h2 className="text-4xl lg:text-6xl  font-heading text-white">
                   The BEST WORKOUT in America
                 </h2>
-                {/* <h2 className="font-body text-lg lg:text-2xl text-white mb-10">
-                  No-nonsense + Hard work = Great results
-                </h2> */}
+
                 <div className="">
                   <a
                     className="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 bg-taRed hover:bg-opacity-80 text-white font-semibold leading-loose transition duration-200 rounded-xl"
@@ -178,7 +129,7 @@ export default function WorkoutPage(props) {
                 playsInline
               >
                 <source
-                  src="https://res.cloudinary.com/trainamerican/video/upload/q_auto/v1640631044/Hero_Video_c8zvof.mp4"
+                  src="https://res.cloudinary.com/trainamerican/video/upload/c_scale,dpr_auto,f_auto,q_auto,w_1280/v1643744365/Workout_page_Take_104_ozthfm.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -213,8 +164,9 @@ export default function WorkoutPage(props) {
                     10: Muscle Activation
                   </h3>
                   <p className="text-gray-200 leading-loose">
-                    10 minutes of warm-up exercises that prime the muscles
-                    targeted by the workout
+                    10 minutes of warm-up designed to prime the muscles targeted
+                    by the workout, elevate your heart-rate, and mentally
+                    prepare you for the hard work ahead.
                   </p>
                 </div>
               </div>
@@ -235,7 +187,7 @@ export default function WorkoutPage(props) {
                   </h3>
                   <p className="text-gray-200 leading-loose">
                     40 minutes of our proprietary fitness style proven to
-                    increase strength and stamina
+                    increase strength and stamina.
                   </p>
                 </div>
               </div>
@@ -256,7 +208,7 @@ export default function WorkoutPage(props) {
                   </h3>
                   <p className="text-gray-200 leading-loose">
                     10 minutes of mindful cool down to normalize your heart rate
-                    and begin recovery
+                    and begin recovery.
                   </p>
                 </div>
               </div>
@@ -394,7 +346,7 @@ export default function WorkoutPage(props) {
                     Movement Screens
                   </span>
                   <h2 class="mb-2 text-2xl font-bold font-heading">
-                    Fully custom movement screens
+                    Custom Movement Displays
                   </h2>
                   <p class="mb-4 text-lg text-gray-200 leading-loose">
                     Our bespoke workout screens show each exercise in an
@@ -421,12 +373,10 @@ export default function WorkoutPage(props) {
                   <p class="mb-4 text-lg text-gray-200 leading-loose">
                     We believe weight alone is not the best metric to establish
                     goals or track progress. By using the InBody scanner you’ll
-                    receive an extensive blueprint of your body composition in
-                    the matter of minutes. An easy-to-understand, accurate and
-                    objective measurements of your muscle mass, fat mass, body
-                    fat percentage, and how it is disturbed throughout your
-                    body. Leaving you with all the data you need to make
-                    personalized and measurable goals for your ideal body.
+                    receive an extensive blueprint of your body composition.
+                    Easy-to-understand, accurate and objective measurements
+                    leave you with all the data you need to achieve personalized
+                    goals for your ideal body.
                   </p>
                 </div>
               </div>
@@ -446,17 +396,12 @@ export default function WorkoutPage(props) {
                     Heart Rate Tracking
                   </h2>
                   <p class="mb-4 text-lg text-gray-200 leading-loose">
-                    Our proprietary Track American heart rate monitor equips you
-                    with personalized data, displayed in real time during your
+                    Our Track American heart rate monitor equips you with
+                    personalized data, displayed in real time during your
                     workout. This tool maximizes your workout experience by
                     giving you instant feedback so you can train smarter and
-                    more efficiently. An added asset for you, as well as your
-                    coach, to determine when you could push a little bit harder
-                    or dial it back for some needed recovery. A full summary
-                    after each workout gives you the gratification you deserve
-                    after you Train American. Using the data stored in your app
-                    after each workout to see workouts conquered, calories
-                    burned, and points achieved.
+                    more efficiently. A full summary after each workout gives
+                    you the gratification you deserve after you Train American.
                   </p>
                 </div>
               </div>
@@ -555,7 +500,9 @@ export default function WorkoutPage(props) {
         </div>
       </div>
 
-      <div>
+      <CTA />
+
+      {/* <div>
         <div className="py-20 bg-gray-50 radius-for-skewed">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap items-center -mx-3">
@@ -601,12 +548,7 @@ export default function WorkoutPage(props) {
                           <p className="mb-6 text-gray-500 leading-loose">
                             {coach.description}
                           </p>
-                          {/* <p className="mb-6 text-gray-500 leading-loose">
-                            Quisque id sagittis turpis. Nulla sollicitudin
-                            rutrum eros eu dictum. Integer sit amet erat sit
-                            amet lectus lacinia mattis. Donec est tortor,
-                            fermentum at urna a, accumsan suscipit sem.
-                          </p> */}
+                          
                         </div>
                       </div>
                     </Zoom>
@@ -618,7 +560,7 @@ export default function WorkoutPage(props) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

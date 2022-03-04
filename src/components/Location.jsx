@@ -43,7 +43,7 @@ export function Location(props) {
       name: "Glenview, IL",
       address: "954 Harlem Ave. Glenview, IL 60025",
       position: { lat: 42.07196, lng: -87.80638 },
-      comingSoon: true,
+      comingSoon: false,
       link: "https://locations.104010fitness.com/glenview",
       book: "https://locations.104010fitness.com/glenviewfreeweek",
     },

@@ -4,14 +4,15 @@ import Fade from "react-reveal/Fade";
 /* This example requires Tailwind CSS v2.0+ */
 // import { Fragment } from "react";
 import { Transition } from "@headlessui/react";
-import FlyoutMenu from "../components/FlyoutMenu";
+
 import { MenuIcon, XIcon, UserCircleIcon } from "@heroicons/react/outline";
 // import DarkLogo from "../assets/DarkLogo.svg";
 
 const links = [
   { name: "Home", destination: "/" },
-  { name: "About Us", destination: "/about" },
+  { name: "Our Workout", destination: "/workout" },
   { name: "Locations", destination: "/locations" },
+  { name: "Store", destination: "/store" },
   { name: "FAQs", destination: "/faq" },
 ];
 
@@ -139,9 +140,6 @@ export default function Navigation(props) {
                       <a
                         area-label="contact button"
                         href="/locations"
-                        // onClick={() => {
-                        //   props.setShowForm(true);
-                        // }}
                         className="h-12 px-4 py-3 text-md inline-flex items-center font-semibold leading-none bg-taBlue hover:bg-taLightBlue text-white rounded transition duration-500 ease-in-out "
                       >
                         FREE TRIAL
@@ -152,9 +150,6 @@ export default function Navigation(props) {
                       <a
                         area-label="contact button"
                         href="https://www.fitmetrix.io/webportal/packages/fee66bea-163c-ec11-aa68-c756551153f3"
-                        // onClick={() => {
-                        //   props.setShowForm(true);
-                        // }}
                         className="h-12 px-4 py-3 text-md inline-flex items-center font-semibold leading-none bg-taRed hover:bg-opacity-80 text-white rounded transition duration-500 ease-in-out "
                       >
                         BOOK NOW
