@@ -19,8 +19,8 @@ export default function PatriotChallenge() {
                 <div class="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
                   <img
                     class="object-cover object-center rounded-3xl shadow-2xl bg-gray-300"
-                    src="https://res.cloudinary.com/trainamerican/image/upload/dpr_auto,f_auto,q_auto/v1646326392/161A1504_kp4553.jpg"
-                    alt=""
+                    src="https://res.cloudinary.com/trainamerican/image/upload/dpr_auto,f_auto,q_auto/v1646484715/MicrosoftTeams-image_13_rjnnv5.jpg"
+                    alt="Patriot Challenge Motivation"
                   />
                 </div>
               </div>
