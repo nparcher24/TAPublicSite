@@ -94,9 +94,9 @@ export default function Home(props) {
               </div>
             </section>
 
-            {/* <section>
+            <section>
               <PatriotChallenge />
-            </section> */}
+            </section>
 
             <div className="container mx-auto max-w-6xl">
               <section className="py-2">

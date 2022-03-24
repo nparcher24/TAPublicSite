@@ -16,10 +16,10 @@ export default function PatriotChallenge() {
                 aria-hidden="true"
               ></div>
               <div class="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
-                <div class="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
+                <div class="aspect-w-10 aspect-h-6 sm:aspect-w-5 sm:aspect-h-4 lg:aspect-w-5">
                   <img
                     class="object-cover object-center rounded-3xl shadow-2xl bg-gray-300"
-                    src="https://res.cloudinary.com/trainamerican/image/upload/dpr_auto,f_auto,q_auto/v1646484715/MicrosoftTeams-image_13_rjnnv5.jpg"
+                    src="https://res.cloudinary.com/trainamerican/image/upload/dpr_auto,f_auto,q_auto/v1648152398/HERO_MISSION_CROWTHER_nv50et.jpg"
                     alt="Patriot Challenge Motivation"
                   />
                 </div>
@@ -36,18 +36,20 @@ export default function PatriotChallenge() {
                   class="text-3xl font-extrabold text-white font-heading"
                   id="join-heading"
                 >
-                  Are you a Patriot?
+                  THE TRAIN AMERICAN CHALLENGE IS BACK!!!
                 </h2>
-                <p class="text-lg text-white font-body">
-                  Prove it. Do something to better yourself, your family, your
-                  community, and your country. Join the 10.40.10 Patriot
-                  Challenge on March 15th, 2022.
+                <p class="text-lg text-white font-body">May 21, 2022</p>
+                <p class="text-lg text-white font-body mt-8">
+                  Our next mission is just as challenging as it is
+                  inspirational. The story of this hero will have your
+                  adrenaline pumping, emotions flowing, and humbling sense of
+                  pride in our countrymen.
                 </p>
                 <a
                   class="transition duration-500  block font-heading font-bold w-full py-3 px-5 text-center bg-white border border-transparent rounded-md shadow-md text-base text-taLightRed hover:bg-gray-200 sm:inline-block sm:w-auto"
                   href="https://trainamericanchallenge.com/patriotchallenge"
                 >
-                  LEARN MORE
+                  FIND OUT MORE
                 </a>
               </div>
             </div>
