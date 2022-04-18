@@ -10,6 +10,7 @@ import Promotion from "../components/Promotion";
 import Banner from "../components/Banner";
 import { ShoppingBagIcon } from "@heroicons/react/outline";
 import PatriotChallenge from "../components/PatriotChallenge";
+import RecoveryRoom from "../components/RecoveryRoom";
 
 export default function Home(props) {
   const [showAboutVideo, setShowAboutVideo] = React.useState(false);
@@ -94,9 +95,12 @@ export default function Home(props) {
               </div>
             </section>
 
-            <section>
+            <Fade>
+              <RecoveryRoom />
+            </Fade>
+            {/* <section>
               <PatriotChallenge />
-            </section>
+            </section> */}
 
             <div className="container mx-auto max-w-6xl">
               <section className="py-2">
