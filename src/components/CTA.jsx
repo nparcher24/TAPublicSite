@@ -33,7 +33,7 @@ export default function CTA(props) {
                 href="/locations"
                 className="rounded inline-block py-5 px-16 leading-none text-xl text-white bg-taBlue hover:bg-taLightBlue shadow font-bold transition-all duration-500"
               >
-                CLAIM FREE WEEK
+                CLAIM FREE TRIAL
               </a>
             </div>
           </div>
